@@ -1,0 +1,47 @@
+{
+  "name": "imooc-on-blockchain",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "antd": "3.11.2",
+    "babel-plugin-import": "1.11.0",
+    "bignumber.js": "8.0.1",
+    "ganache-cli": "6.2.3",
+    "ipfs-api": "26.1.2",
+    "mocha": "5.2.0",
+    "onchange": "5.2.0",
+    "react": "16.6.3",
+    "react-app-rewired": "1.6.2",
+    "react-dom": "16.6.3",
+    "react-router-dom": "4.3.1",
+    "react-scripts": "2.1.1",
+    "rimraf": "2.6.2",
+    "solc": "0.4.24",
+    "truffle-hdwallet-provider": "0.0.3",
+    "web3": "1.0.0-beta.34"
+  },
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-scripts eject",
+    "deploy": "node scripts/deploy.js",
+    "precompile": "rimraf src/compiled/* ",
+    "compile": "node scripts/compile.js",
+    "precompile:w": "npm run compile",
+    "compile:w": "onchange 'contracts/*.sol' -- npm run compile",
+    "test:w": "mocha --watch",
+    "rebuild": "npm run compile && mocha",
+    "rebuild:w": "onchange 'contracts/*.sol' 'test/*.js' -- npm run rebuild"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
+

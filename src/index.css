@@ -1,0 +1,21 @@
+.logo{
+  width:140px;
+  float: left;
+  margin-right: 20px;
+}
+.logo img{
+  width:100%;
+}
+.content{
+  text-align: center;
+  overflow: hidden;
+  border: 1px splid #1890ff;
+  border-radius: 5px;
+}
+img.item{
+  height: 150px;
+  width:auto;
+}
+.center{
+  text-align: center;
+}
